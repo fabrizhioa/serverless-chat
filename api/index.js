@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-const users = require('./routes/questions');
-const messages = require('./routes/batchs');
+//const users = require('./routes/users');
+const messages = require('./routes/messages');
 
 const app = express();
 
