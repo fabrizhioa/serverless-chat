@@ -8,8 +8,8 @@ const Users = require('../models/Users');
 const router = express.Router();
 
 //accciones validas
-router.get('/:email', (req, res) => {
-    Users.find({ email: req.params.email })
+router.get('/:email/:userName', (req, res) => {
+    Users.find({ email: req.params.email, userName: req.params.userName })
         .exec()
         .then((x) => res.status(200).send(x));
 });
