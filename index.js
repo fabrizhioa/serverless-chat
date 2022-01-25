@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-//const users = require('./routes/users');
 const messages = require('./routes/messages');
 const users = require('./routes/users');
 
@@ -20,4 +19,5 @@ mongoose.connect(process.env.MONGO_URI, {
 
 app.use('/api/messages', messages);
 app.use('/api/users', users);
+
 module.exports = app;
